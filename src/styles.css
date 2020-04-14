@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+}
+
+.item {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #333333;
+  border-style: solid;
+  border-color: rgb(33, 33, 33);
+  border-width: 0.5px;
+  height: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: var(--neutralSecondary);
+  position: relative;
+}
+
+.item > *:not(:first-child) {
+  margin-left: 16px;
+}
+
+.item:hover {
+  background: rgb(33, 33, 33);
+}
+
+.unread:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--themePrimary);
+}
+
+.check {
+  flex-shrink: 0;
+}
+
+.user {
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 25%;
+  font-weight: 600;
+}
+
+.desc {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-grow: 1;
+
+  overflow: hidden;
+}
+
+.title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  flex-shrink: 0;
+  color: var(--themePrimary);
+}
+
+.message {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  margin-left: 16px;
+}
+
+.time {
+  flex-shrink: 0;
+  text-align: right;
+  white-space: nowrap;
+  width: 100px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--neutralSecondary);
+}
+
+:root {
+  --black: #ffffff;
+  --blackTranslucent40: rgba(255, 255, 255, 0.4);
+  --blackTranslucent10: rgba(255, 255, 255, 0.1);
+  --white: #333333;
+  --whiteTranslucent40: rgba(33, 33, 33, 0.4);
+  --whiteTranslucent90: rgba(33, 33, 33, 0.9);
+  --neutralDark: #ffffff;
+  --neutralPrimary: #ffffff;
+  --neutralPrimaryAlt: #f8f8f8;
+  --neutralSecondary: #f4f4f4;
+  --neutralTertiary: #eaeaea;
+  --neutralTertiaryAlt: #c8c8c8;
+  --neutralQuaternary: #2e2e2e;
+  --neutralLight: #000000;
+  --neutralQuaternaryAlt: #2e2e2e;
+  --neutralLighter: #212121;
+  --neutralLighterAlt: #212121;
+  --redDark: #e81123;
+  --green20: #6bb700;
+  --flaggedMessage: #242100;
+  --richUserContentBackground: #eaeaea;
+  --composeNeutralBackground: #212121;
+  --composeNeutralLighterBackground: #fff;
+  --readingPaneCardBorder: #000000;
+  --readingPaneCardFocusBorder: #d0d0d0;
+  --themeDarker: #b3d6fc;
+  --themeDark: #b3d6fc;
+  --themeDarkAlt: #b3d6fc;
+  --themePrimary: #69afe5;
+  --themeSecondary: #2488d8;
+  --themeTertiary: #0078d4;
+  --themeLight: #106ebe;
+  --themeLighter: #005a9e;
+  --themeLighterAlt: #004578;
+  --headerBackground: #0078d4;
+  --headerBackgroundSearch: #106ebe;
+  --headerBrandText: #fff;
+  --headerTextIcons: #fff;
+  --headerSearchBoxBackground: rgba(33, 33, 33, 0.7);
+  --headerSearchBoxIcon: #eff6fc;
+  --headerSearchPlaceholderText: #eff6fc;
+  --headerSearchButtonBackground: #69afe5;
+  --headerSearchButtonBackgroundHover: #b3d6fc;
+  --headerSearchButtonIcon: #000;
+  --headerSearchFilters: #69afe5;
+  --headerSearchFiltersHover: #eff6fc;
+  --headerButtonsBackground: #0078d4;
+  --headerButtonsBackgroundHover: #106ebe;
+  --headerButtonsBackgroundSearch: #106ebe;
+  --headerButtonsBackgroundSearchHover: #005a9e;
+  --headerBadgeBackground: #eff6fc;
+  --headerBadgeText: #fff;
+  --headerSearchIcon: #fff;
+  --searchBoxBackground: rgba(33, 33, 33, 0.7);
+  --fallback-black: #000000;
+  --fallback-blackTranslucent40: rgba(0, 0, 0, 0.4);
+  --fallback-blackTranslucent10: rgba(0, 0, 0, 0.1);
+  --fallback-white: #ffffff;
+  --fallback-whiteTranslucent40: rgba(255, 255, 255, 0.4);
+  --fallback-whiteTranslucent90: rgba(255, 255, 255, 0.9);
+  --fallback-neutralDark: #201f1e;
+  --fallback-neutralPrimary: #323130;
+  --fallback-neutralPrimaryAlt: #3b3a39;
+  --fallback-neutralSecondary: #605e5c;
+  --fallback-neutralTertiary: #a19f9d;
+  --fallback-neutralTertiaryAlt: #c8c6c4;
+  --fallback-neutralQuaternary: #d2d0ce;
+  --fallback-neutralQuaternaryAlt: #e1dfdd;
+  --fallback-neutralLight: #edebe9;
+  --fallback-neutralLighter: #f3f2f1;
+  --fallback-neutralLighterAlt: #faf9f8;
+  --fallback-redDark: #a4262c;
+  --fallback-green20: #0b6a0b;
+  --fallback-flaggedMessage: #fffdd9;
+  --fallback-richUserContentBackground: #fff;
+  --fallback-composeNeutralBackground: #fff;
+  --fallback-composeNeutralLighterBackground: #f4f4f4;
+  --fallback-readingPaneCardBorder: #edebe9;
+  --fallback-readingPaneCardFocusBorder: #d0d0d0;
+  --fallback-themeDarker: #004578;
+  --fallback-themeDark: #005a9e;
+  --fallback-themeDarkAlt: #106ebe;
+  --fallback-themePrimary: #0078d4;
+  --fallback-themeSecondary: #2b88d8;
+  --fallback-themeTertiary: #71afe5;
+  --fallback-themeLight: #c7e0f4;
+  --fallback-themeLighter: #deecf9;
+  --fallback-themeLighterAlt: #eff6fc;
+  --fallback-headerBackground: #0078d4;
+  --fallback-headerBackgroundSearch: #005a9e;
+  --fallback-headerBrandText: #ffffff;
+  --fallback-headerTextIcons: #ffffff;
+  --fallback-headerSearchBoxBackground: rgba(255, 255, 255, 0.7);
+  --fallback-headerSearchBoxIcon: #004578;
+  --fallback-headerSearchPlaceholderText: #004578;
+  --fallback-headerSearchButtonBackground: #0078d4;
+  --fallback-headerSearchButtonBackgroundHover: #004578;
+  --fallback-headerSearchButtonIcon: #ffffff;
+  --fallback-headerSearchFilters: #0078d4;
+  --fallback-headerSearchFiltersHover: #004578;
+  --fallback-headerButtonsBackground: #0078d4;
+  --fallback-headerButtonsBackgroundHover: #005a9e;
+  --fallback-headerButtonsBackgroundSearch: #005a9e;
+  --fallback-headerButtonsBackgroundSearchHover: #004578;
+  --fallback-headerBadgeBackground: #004578;
+  --fallback-headerBadgeText: #ffffff;
+  --fallback-headerSearchIcon: #ffffff;
+  --fallback-searchBoxBackground: rgba(255, 255, 255, 0.7);
+}
